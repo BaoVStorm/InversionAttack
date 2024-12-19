@@ -163,21 +163,21 @@ def process(defend, dataset, save_path, index_img = -1):
         num_classes = 10
         channel = 1
         hidden = 588
-        dst = datasets.MNIST(root="MNIST/.", download=False)
+        dst = datasets.MNIST(root="dataset/MNIST/.", download=True)
 
     elif dataset == 'CIFAR100':
         shape_img = (32, 32)
         num_classes = 100
         channel = 3
         hidden = 768
-        dst = datasets.CIFAR100(root="CIFAR100/.", download=False)
+        dst = datasets.CIFAR100(root="dataset/CIFAR100/.", download=True)
 
     elif dataset == 'LFW':
         shape_img = (32, 32)
         num_classes = 5749
         channel = 3
         hidden = 768
-        lfw_path = os.path.join(".", 'LFW/lfw-py/lfw_funneled')
+        lfw_path = os.path.join(".", 'dataset/LFW/lfw-py/lfw_funneled')
         dst = lfw_dataset(lfw_path, shape_img)
 
     # dst = datasets.CIFAR10("~/.torch", download=True)
@@ -261,7 +261,7 @@ def process(defend, dataset, save_path, index_img = -1):
 
         # Masking Gradients
         original_dy_dx[8] = original_dy_dx[8] * torch.Tensor(mask).to(device)
-
+        
         plt.figure()
         plt.plot(deviation_f1_x_norm_sum.cpu().numpy(), label='||dev r||')
         plt.plot(feature_fc1_graph.cpu().detach().numpy().flatten(), label='||r||')
@@ -500,8 +500,3 @@ def main(dataset, exp_num = 1):
 if __name__ == '__main__':
     for dataset in ["MNIST", "CIFAR100", "LFW"]:   
         main(dataset, 5)
-
-    # main("MNIST", 5)
-
-    # for dataset in ["CIFAR100", "LFW"]:   
-    #     main(dataset, 3)

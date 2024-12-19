@@ -138,7 +138,7 @@ def create_Visualize_Loss(type, method, epoch_points, history, image_history, sa
     plt.savefig('%s/%05d_%s_%s_on_%s.png' % (save_path, imidx_value, method, type, imidx_list))
     plt.close()
 
-def main(dataset = 'MNIST'):
+def main(dataset = 'MNIST', num_exp = 40):
     print("=============== Load in dataset ===============")
 
     root_path = '.'
@@ -148,7 +148,6 @@ def main(dataset = 'MNIST'):
     lr = 1.0
     num_dummy = 1
     Iteration = 300
-    num_exp = 40
 
     use_cuda = torch.cuda.is_available()
     device = 'cuda' if use_cuda else 'cpu'
@@ -171,21 +170,21 @@ def main(dataset = 'MNIST'):
         num_classes = 10
         channel = 1
         hidden = 588
-        dst = datasets.MNIST(root="MNIST/.", download=False)
+        dst = datasets.MNIST(root="dataset/MNIST/.", download=False)
 
     elif dataset == 'CIFAR100':
         shape_img = (32, 32)
         num_classes = 100
         channel = 3
         hidden = 768
-        dst = datasets.CIFAR100(root="CIFAR100/.", download=False)
+        dst = datasets.CIFAR100(root="dataset/CIFAR100/.", download=False)
 
     elif dataset == 'LFW':
         shape_img = (32, 32)
         num_classes = 5749
         channel = 3
         hidden = 768
-        lfw_path = os.path.join(root_path, 'LFW/lfw-py/lfw_funneled')
+        lfw_path = os.path.join(root_path, 'dataset/LFW/lfw-py/lfw_funneled')
         dst = lfw_dataset(lfw_path, shape_img)
 
     else:
@@ -455,4 +454,5 @@ def main(dataset = 'MNIST'):
 
 if __name__ == '__main__':
     for dataset in ["MNIST", "CIFAR100", "LFW"]:    
-        main(dataset)
+        # dataset và số lần thử nghiệm
+        main(dataset = dataset, num_exp = 40)
