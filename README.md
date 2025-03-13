@@ -1,3 +1,5 @@
+![Inversion Attack](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.mdpi.com%2F1424-8220%2F22%2F19%2F7157&psig=AOvVaw0xD4TpAuhB-KCoWuhq3Elg&ust=1741953388967000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPiTs5uAh4wDFQAAAAAdAAAAABAI)
+
 # 🔒 Inversion Attack - Tấn Công Đảo Ngược
 
 ## 📌 Giới Thiệu  
