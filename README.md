@@ -13,10 +13,31 @@
    - Model Inversion (MI)  
    - Generative Model Attacks  
 
-## 🛡️ Cách Phòng Chống  
-- **Thêm nhiễu (Differential Privacy)**  
-- **Giới hạn truy cập mô hình**  
-- **Sử dụng các kỹ thuật làm mờ thông tin**  
+## 🛠 Cấu Trúc Code  
+Trong code này có 3 phần chính:
+
+### 📂 1. `Download_Dataset.ipynb`  
+- Tải các bộ dữ liệu gồm: **MNIST, CIFAR-100, LFW**.  
+
+### 📂 2. `Attack_DGL_iDGL.py`  
+- Code mô tả tấn công với hai mô hình:  
+  - **DGL (Deep Gradient Leakage)**  
+  - **iDGL (Improved Deep Gradient Leakage)**  
+- Mô tả chi tiết cách thực hiện tấn công để tái dựng dữ liệu từ mô hình.  
+
+### 📂 3. `Defend_DP_MG_MC.py`  
+- Code mô tả các phương pháp phòng thủ chống lại tấn công DGL và iDGL:  
+  - **Differential Privacy (DP)**: Thêm nhiễu vào dữ liệu để bảo vệ thông tin.  
+  - **Masking Gradients (MG)**: Che giấu gradient để tránh bị khai thác.  
+  - **Model Compression (MC)**: Giảm kích thước mô hình để hạn chế rò rỉ thông tin.  
+
+---
+
+## 📊 Kết Quả Thực Nghiệm  
+
+Kết quả được lưu trong thư mục `results`:
+- **`results/attack/`**: Chứa kết quả khi tiến hành tấn công.  
+- **`results/defend/`**: Chứa kết quả khi áp dụng phương pháp phòng thủ.  
 
 ---
 
