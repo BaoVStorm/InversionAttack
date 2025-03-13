@@ -1,9 +1,40 @@
-![Inversion Attack](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.mdpi.com%2F1424-8220%2F22%2F19%2F7157&psig=AOvVaw0xD4TpAuhB-KCoWuhq3Elg&ust=1741953388967000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPiTs5uAh4wDFQAAAAAdAAAAABAI)
+![Inversion Attack](https://ai2-s2-public.s3.amazonaws.com/figures/2017-08-08/9853a348f61aec83b410f307ab905a4ae001fcd4/9-Figure3-1.png)
 
 # 🔒 Inversion Attack - Tấn Công Đảo Ngược
 
 ## 📌 Giới Thiệu  
-**Inversion Attack** là một kỹ thuật tấn công trong lĩnh vực bảo mật và học máy, nhằm tái tạo dữ liệu gốc từ đầu ra hoặc trọng số của một mô hình AI.  
+**Inversion Attack** là một kỹ thuật tấn công trong lĩnh vực bảo mật và học máy, nhằm tái tạo dữ liệu gốc từ đầu ra hoặc trọng số của một mô hình AI.
+**Sử dụng 2 loại tấn công 🔍 Deep Gradient Leakage (DGL) & Improved Deep Gradient Leakage (iDGL)**
+
+### 1. Deep Gradient Leakage (DGL)  
+**DGL** là một phương pháp tấn công đảo ngược dữ liệu từ gradient của mô hình.  
+- Dựa trên việc khai thác gradient trong quá trình huấn luyện.  
+- Cho phép kẻ tấn công tái dựng hình ảnh hoặc dữ liệu gốc từ thông tin gradient.  
+- Được đề xuất trong bài báo *"Deep Leakage from Gradients" (Zhu et al., 2019)*.  
+
+🔹 **Cơ chế hoạt động:**  
+1. Kẻ tấn công có thể truy cập gradient của mô hình.  
+2. Sử dụng một quá trình tối ưu hóa để khôi phục dữ liệu gốc.  
+3. DGL có thể tái tạo hình ảnh với độ chính xác cao, ngay cả trên dữ liệu phức tạp.  
+
+🔹 **Hạn chế:**  
+- Độ nhạy cao với batch size (batch nhỏ dễ bị tấn công hơn).  
+- Không hoạt động tốt khi có nhiễu hoặc kỹ thuật phòng thủ mạnh.  
+
+---
+
+### 2. Improved Deep Gradient Leakage (iDGL)  
+**iDGL** là phiên bản nâng cấp của DGL, giúp tăng cường khả năng tấn công bằng cách tối ưu hóa tốt hơn.  
+- Được phát triển để khai thác gradient một cách hiệu quả hơn.  
+- Sử dụng thuật toán tối ưu hóa nâng cao giúp phục hồi dữ liệu chính xác hơn.  
+- Có thể vượt qua một số phương pháp phòng thủ cơ bản như thêm nhiễu hoặc làm mờ gradient.  
+
+🔹 **Cơ chế hoạt động:**  
+1. Tận dụng kỹ thuật tối ưu hóa gradient tốt hơn.  
+2. Cải thiện khả năng tái tạo chi tiết ảnh so với DGL.  
+3. Ít bị ảnh hưởng bởi batch size hoặc một số kỹ thuật phòng thủ yếu.  
+
+🔹 **So sánh DGL và iDGL:**  
 
 ## ⚙️ Cách Hoạt Động  
 1. **Dựa trên đầu ra mô hình**:  
