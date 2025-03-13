@@ -1,9 +1,12 @@
-![Inversion Attack](https://ai2-s2-public.s3.amazonaws.com/figures/2017-08-08/9853a348f61aec83b410f307ab905a4ae001fcd4/9-Figure3-1.png)
+![x2](https://github.com/user-attachments/assets/e705608a-9ae8-4527-a383-f49f218ebaa2)
 
 # 🔒 Inversion Attack - Tấn Công Đảo Ngược
 
 ## 📌 Giới Thiệu  
 **Inversion Attack** là một kỹ thuật tấn công trong lĩnh vực bảo mật và học máy, nhằm tái tạo dữ liệu gốc từ đầu ra hoặc trọng số của một mô hình AI.
+
+![sensors-22-07157-g005](https://github.com/user-attachments/assets/045e2569-0967-4b77-82c4-58116555e1ad)
+
 **Sử dụng 2 loại tấn công 🔍 Deep Gradient Leakage (DGL) & Improved Deep Gradient Leakage (iDGL)**
 
 ### 1. Deep Gradient Leakage (DGL)  
@@ -35,6 +38,7 @@
 3. Ít bị ảnh hưởng bởi batch size hoặc một số kỹ thuật phòng thủ yếu.  
 
 🔹 **So sánh DGL và iDGL:**  
+![DLG_iDLG](https://github.com/user-attachments/assets/3d411082-415a-4455-ae29-d73cae7ef362)
 
 ## ⚙️ Cách Hoạt Động  
 1. **Dựa trên đầu ra mô hình**:  
