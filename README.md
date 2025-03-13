@@ -43,7 +43,7 @@ Kết quả được lưu trong thư mục `results`:
 
 ## 📝 Góp Ý & Liên Hệ  
 
-📩 Bạn có thể gửi phản hồi bằng cách mở một [issue mới](../../issues/new?template=feedback.yml).  
+📩 Bạn có thể gửi phản hồi bằng cách mở một [New Issue](../../issues/new?template=feedback.yml).  
 
 ### 📌 Hướng dẫn  
 1. Nhấp vào **New Issue**.  
