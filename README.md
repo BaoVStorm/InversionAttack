@@ -50,4 +50,4 @@ Kết quả được lưu trong thư mục `results`:
 2. Điền thông tin theo mẫu.  
 3. Nhấn **Submit**.  
 
-💡 Nếu bạn có câu hỏi, hãy liên hệ qua email [your-email@example.com](mailto:your-email@example.com).  
+💡 Nếu bạn có câu hỏi, hãy liên hệ qua email [your-email@example.com](mailto:tranvubao2004@gmail.com).  
