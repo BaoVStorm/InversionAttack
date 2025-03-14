@@ -22,7 +22,9 @@
 
 🔹 **Hạn chế:**  
 - Độ nhạy cao với batch size (batch nhỏ dễ bị tấn công hơn).  
-- Không hoạt động tốt khi có nhiễu hoặc kỹ thuật phòng thủ mạnh.  
+- Không hoạt động tốt khi có nhiễu hoặc kỹ thuật phòng thủ mạnh.
+
+![03172_DLG_on_ 3172](https://github.com/user-attachments/assets/cffe7290-45ae-4db1-9494-aa7e63353fd9)
 
 ---
 
@@ -37,7 +39,10 @@
 2. Cải thiện khả năng tái tạo chi tiết ảnh so với DGL.  
 3. Ít bị ảnh hưởng bởi batch size hoặc một số kỹ thuật phòng thủ yếu.  
 
+![06474_iDLG_on_ 6474](https://github.com/user-attachments/assets/34bba868-8a3d-4c90-a760-7bb67b6005ff)
+
 🔹 **So sánh DGL và iDGL:**  
+
 ![DLG_iDLG](https://github.com/user-attachments/assets/3d411082-415a-4455-ae29-d73cae7ef362)
 
 ## ⚙️ Cách Hoạt Động  
@@ -64,11 +69,19 @@ Trong code này có 3 phần chính:
 
 ### 📂 3. `Defend_DP_MG_MC.py`  
 - Code mô tả các phương pháp phòng thủ chống lại tấn công DGL và iDGL:  
-  - **Differential Privacy (DP)**: Thêm nhiễu vào dữ liệu để bảo vệ thông tin.  
-  - **Masking Gradients (MG)**: Che giấu gradient để tránh bị khai thác.  
+  - **Differential Privacy (DP)**: Thêm nhiễu vào dữ liệu để bảo vệ thông tin.
+    ![DP_MSE](https://github.com/user-attachments/assets/0a4a6ba0-b7e5-44ab-9baf-d6b4814a2cb9)
+  - **Masking Gradients (MG)**: Che giấu gradient để tránh bị khai thác.
+    ![MG_NanDef_MSE](https://github.com/user-attachments/assets/09f60db2-25f5-4022-a7ef-4984a3770964)
   - **Model Compression (MC)**: Giảm kích thước mô hình để hạn chế rò rỉ thông tin.  
+    ![MC_NanDef_Loss](https://github.com/user-attachments/assets/54be2e18-e774-47ef-ab28-cb23b8cabec6)
+   
+#### Example so sánh 3 mô hình phỏng thủ
+![Compare_3_Defend_Loss](https://github.com/user-attachments/assets/18dab68a-3f55-4d07-b4bb-261dbad46b5b)
 
 ---
+
+## [Video Demo Code (View HERE)](https://drive.google.com/file/d/1V1a5gw6wk2OuqEXgEPdloVqfLP0U0gHI/view?usp=drive_link)
 
 ## 📊 Kết Quả Thực Nghiệm  
 
